@@ -1,20 +1,39 @@
-<!DOCTYPE html>
-<html>
-<head> 
+<!DOCTYPE html> <!--HTML 5 dokumentti-->
+<html> <!--html dokumentin juurielementti-->
+<head> <!--otsikkotiedot-->
 <meta charset="utf-8"/>
-<title> HTML</title>
+<title> HTML</title> <!--Sivun otsikko-->
 </head>
-<body>
-    <h1>HTML otsikko h1</h1>
-    <p>Tämä on Tekstikappale </p>
+<body> <!--dokumentin runko-->
+    <h1>HTML</h1> <!--Ylimmän tason otsikko-->
+    <p>Tämä on nopea esittely Html sivun rakenteista ja tageista </p> <!--Tekstikappale-->
+    
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png" alt="HTML logo" width="150" height="150" />
-    <h2>HTML Tutorial otsikko h2</h2>
-    <a href=https://www.w3schools.com/html/default.asp> w3schools HTML Tutorial </a>
-    <h3>br elementin esittely h3</h3>
+    
+    <h1>Linkkejä</h1>
+    <ul>
+    <li><a href=https://www.w3schools.com/html/default.asp> w3schools HTML Tutorial </a></li><!--Linkki-->
+    <li><a href=https://fi.wikipedia.org/wiki/HTML> Wikipedia </a></li><br><!--Linkki-->
+
+    <fieldset>
+        <legend>Personalia:</legend>
+        <label>Etunimi:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label>Sukunimi:</label><br>
+        <input type="text" id="lname" name="lname"><br><br> 
+    </fieldset>
+    
+    <br><input type="button" value="paina tästä" onclick="alert('Terve!')"> </button> <!--Nappi joka ilmoittaa ilmoituksen"Terve"-->
+
+    
     <p> br elementillä <br> voidaan katkaista teksti <br> eri riville </p>
-    <h4>Tämä on h4 </h4>
-    <h5>Tämä on h5</h5>
-    <h6>Tämä on h6</h6>
+    <h1>Heading tyylit h1-h5</h1>
+    <h1>Heading1</h1>
+    <h2>Heading2</h2>
+    <h3>Heading3</h3>
+    <h4>Heading4</h4>
+    <h5>heading5</h5>
+    <h6>heading6</h6>
 
 </body>
 </html>
