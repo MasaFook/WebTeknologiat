@@ -1,0 +1,58 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:medium;
+    width:60%;
+    margin:auto;
+    background: linear-gradient(15deg,rgb(83, 77, 73),rgba(241, 239, 231, 0.867));
+    padding-top: 50px;
+    padding-bottom: 30%;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.maincontent{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+fieldset{
+    border: 3px;
+    border-style: solid;
+    border-radius: 8px;
+}
+input[type=submit]{
+    background-color: rgb(120, 21, 185);
+    color: white;
+    margin: auto;
+    border: none;
+    border-radius: 8px;
+    padding:4px;
+    width: 60px;
+    height:25px;
+    transition-duration: 0.4s;
+}
+input[type=submit]:hover{
+    background-color: rgb(88, 7, 134);
+    
+}
+input[textarea]:focus{
+    border:2px solid;
+    
+}
+
+input[type=text]:focus{
+    border:2px solid;
+}
+legend{
+    font-weight: bold;
+}
+
+label{
+    font-weight: bold;
+}
+
+.textarea.container{
+    min-width: 335px;
+    min-height: 160px;
+}
+

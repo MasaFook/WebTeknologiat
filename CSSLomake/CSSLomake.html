@@ -6,52 +6,52 @@
 <title> Lomake </title>
 </head>
 <body>
-<form>
-    <div class="maincontent">
-        <div class="fieldset.container">
-        <fieldset>
-            <legend>Contact information:</legend>
-            <table>
-                <tr>
-                    <td><label>First name:</label></td>
-                    <td><input type="text" id="fname" name="fname"></td>
-                    <td colspan="2"><label> Prefered contact method:</label></td>
-                </tr>
-                <tr>
-                    <td><label>Last name:</label></td>
-                    <td><input type="text" id="lname" name="lname"></td>
-                    <td><input type="checkbox" id="emailbox" name="emailbox"></td>
-                    <td><label>Email</label></td>
-                </tr>
-                <tr>
-                    <td><label>Email:</label></td>
-                    <td><input type="email" id="email" name="email"></td>
-                    <td><input type="checkbox" id="tphonebox" name="tphonebox"></td>
-                    <td><label>Telephone</label></td>
-                </tr>
-                <tr>
-                    <td><label>Telephone:</label></td>
-                    <td><input type="tel" id="tphone" name="tphone"></td>
+    <form>
+        <div class="maincontent">
+            <div class="fieldset container">
+            <fieldset>
+                <legend>Contact information:</legend>
+                <table>
+                    <tr>
+                        <td><label>First name:</label></td>
+                        <td><input type="text" id="fname" name="fname"></td>
+                        <td colspan="2"><label> Prefered contact method:</label></td>
+                    </tr>
+                    <tr>
+                        <td><label>Last name:</label></td>
+                        <td><input type="text" id="lname" name="lname"></td>
+                        <td><input type="checkbox" id="emailbox" name="emailbox"></td>
+                        <td><label>Email</label></td>
+                    </tr>
+                    <tr>
+                        <td><label>Email:</label></td>
+                        <td><input type="email" id="email" name="email"></td>
+                        <td><input type="checkbox" id="tphonebox" name="tphonebox"></td>
+                        <td><label>Telephone</label></td>
+                    </tr>
+                    <tr>
+                        <td><label>Telephone:</label></td>
+                        <td><input type="tel" id="tphone" name="tphone"></td>
                         
-                </tr>
-            </table>
-        </fieldset>
-        </div>
+                    </tr>
+                </table>
+            </fieldset>
+            </div>
     
         
-        <fieldset>
-            <legend>Feedback:</legend>
-            <label>Message subject</label>
-            <input type="text" id="message" name="message"><br>
-            <br><textarea name="message" style="width: 335px; height: 160px;">
-            </textarea><br>
-            <label>Attach a file:</label>
-            <input type="file" id="myfile" name="myfile"><br>
-            <input type="submit" value="Send">
-        </fieldset>
-    </div>
+            <fieldset>
+                <legend>Feedback:</legend>
+                <label>Message subject</label>
+                <input type="text" id="message" name="message"><br>
+                <div class="textarea container">
+                <br><textarea name="message" style="width: 335px; height: 160px;">
+                </textarea><br>
+                </div>
+                <label>Attach a file:</label>
+                <input type="file" id="myfile" name="myfile"><br>
+                <input type="submit" value="Send">
+            </fieldset>
+        </div>
     </form>
-
-
 </body>
 </html>
