@@ -1,0 +1,86 @@
+/* asettelu pienimmille näytöille */
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    grid-template-areas: 
+    "header"
+    "content-1" 
+    "content-2" 
+    "content-3"
+    "content-4"
+    "content-5"
+    "content-6"
+    "footer";
+
+}
+/* asettelu isoimmille näytöille */
+@media(min-width:600px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap:20px;
+        grid-template-areas: 
+        "header header"
+        "content-1 content-2" 
+        "content-3 content-4"
+        "content-5 content-6"
+        "footer footer";
+    }
+}
+
+.offi{
+    grid-area: content-3; /* asettaa alueen mihin menee */
+    justify-self: center; /* mihin solun sisällä asettuu */
+
+
+}
+
+.kortti{
+    grid-area: content-2;
+    justify-self: center;
+
+
+}
+
+.kortti-2{
+    grid-area: content-4;
+    justify-self: center;
+    text-align: center;
+
+}
+
+.header{
+    grid-area: header;
+    text-align: center;
+    border-radius: 15px;
+    background-color: rgb(86, 86, 85);
+    color: teal;
+}
+
+.intro{
+    grid-area: content-1;
+    text-align: center;
+    border-radius: 15px;
+    background-color: antiquewhite;
+
+}
+
+.linkit{
+    grid-area: footer;
+    border-radius: 15px;
+    background-color: antiquewhite;
+}
+
+.justify{
+    grid-area: content-5;
+    text-align: center;
+
+}
+
+.align{
+    grid-area: content-6;
+    text-align: center;
+}
