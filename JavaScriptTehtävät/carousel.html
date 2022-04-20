@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!---Bootstrap CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link type="text/css" href="styles/carousel.css">
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="styles/carousel.css">
+    <title>Carousel</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -20,10 +20,19 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" href="jokes.html">Jokes</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="map.html">Map</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="calculator.html">Calculator</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="imagegallery.html">Imagegallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="carousel.html">Carousel</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -46,9 +55,28 @@
             </form>
           </div>
         </div>
-      </nav>
-    
+    </nav>
+      
+    <div class="container">
+      <h3>Kuvakaruselli</h3>
+      <div class="carousel">
+        <img class="imgcarousel" id="imgcarousel" src="" width="300" height="300">
+          <div class="ptext">
+            <p id="ptext">kuvateksti</p>
+          </div>
+          <div class="btngroup">
+            <button id="previousbtn" onclick="previousImg(), console.log(i);">&#9668</button>
+            <button id="stopbtn" onclick="autoPlay()">&#9724</button>
+            <button id="nextbtn" onclick="nextImg(),console.log(i);">&#9658</button>
+          </div>
+      </div>
+    </div>
+
+
 
     <script defer src ="scripts/carousel.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </body>
 </html>
+
