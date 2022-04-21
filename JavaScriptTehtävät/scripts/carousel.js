@@ -16,42 +16,73 @@ let img_array = [{
     "src": "images/pexels-zeeshaan-shabbir-9534103.jpg"
 }
 ];
-/*kuvan ja tekstin alustus sivun ladatessa*/
-let i = 0;
+/*sivun alustus*/
 let img = document.getElementById('imgcarousel');
-img.src = img_array[i].src;
-img.name = img_array[i].name;
-document.getElementById('ptext').innerHTML = img.name;
+let currentIndex =img_array.findIndex(obj => obj.name == localStorage.getItem('strgName')); /* hakee muistista indexin arvon*/
+let index = currentIndex;
+window.onload = load();
 
-/*seuraava kuva*/
-function nextImg(){
-    let max = img_array.length-1;
-    if(i < max){
-        i++;
+function load(){
+    if(localStorage.hasOwnProperty('strgImg')){         /*jos muistista löytyy kuva se asetetaan karuselliin näkymään*/
+        const strgImg = localStorage.getItem('strgImg');
+        const strgName = localStorage.getItem('strgName');
+        img.src=strgImg;
+        img.name=strgName;
+        document.getElementById('ptext').innerHTML = img.name;
     }
     else{
-        i=0;
+        index = 0;                                          /*jos muistista ei löydy asetetaan ensinmäinen kuva näkymään*/
+        img.src = img_array[index].src;
+        img.name = img_array[index].name;
+        document.getElementById('ptext').innerHTML = img.name;
     }
-    img.src = img_array[i].src;
-    img.name = img_array[i].name;
-    document.getElementById('ptext').innerHTML = img.name;   
+}
+
+
+
+    
+
+
+
+
+/*seuraava kuva*/
+
+function nextImg(){
+    let max = img_array.length-1;
+    if(index < max){
+        index++;
+    }
+    else{
+        index=0;
+    }
+    img.src = img_array[index].src;
+    img.name = img_array[index].name;
+    document.getElementById('ptext').innerHTML = img.name;
+    localStorage.clear();
+    localStorage.setItem('strgImg',img.src);
+    localStorage.setItem('strgName',img.name);
 }
 
 /*edellinen kuva*/
+
 function previousImg(){
     let max = img_array.length-1;
-    if(i > 0){
-        i--;
+    if(index > 0){
+        index--;
     }
     else{
-        i = max;
+        index = max;
     }
-    img.src = img_array[i].src;
-    img.name = img_array[i].name;
-    document.getElementById('ptext').innerHTML = img.name;     
+    img.src = img_array[index].src;
+    img.name = img_array[index].name;
+    document.getElementById('ptext').innerHTML = img.name;
+    localStorage.clear();
+    localStorage.setItem('strgImg',img.src);
+    localStorage.setItem('strgName',img.name); 
 }
 
 /* aloittaa automaattisen kuvanvaihdon ja myös pysäyttää*/
+
 let myInterval;
 function autoPlay(){
    
@@ -63,3 +94,6 @@ function autoPlay(){
        myInterval = null;
    }
 }
+console.log(index);
+
+/*valmis koodi*/
