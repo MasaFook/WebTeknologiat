@@ -1,0 +1,27 @@
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-items: center;
+    justify-content: center;
+    grid-gap: 5px;
+}
+
+.column-container{
+    display: grid;
+    grid-template-columns: 200px;
+    justify-items: center;
+    justify-content: center;
+    grid-gap: 5px;
+}
+
+#gridImg{
+    object-fit: cover;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+
+}
