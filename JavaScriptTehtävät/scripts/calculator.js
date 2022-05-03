@@ -1,3 +1,8 @@
+window.onload = function(){
+   document.getElementById("nro1").value = getRandomInt(100);
+   document.getElementById("nro2").value = getRandomInt(100);
+}
+
 function changeValueNro1(type){
    let currentValue = document.getElementById("nro1").value;
    if(type == "plus"){
@@ -38,4 +43,8 @@ function changeValueNro2(type){
         result = nro1 / nro2;
      }
      document.getElementById("resultbox").value = result;
+ }
+
+ function getRandomInt(max){
+    return Math.floor(Math.random() * max);
  }
